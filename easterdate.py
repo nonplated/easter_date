@@ -22,3 +22,9 @@ def calculateEasterDate(year):
     day = n+1
     month = math.floor((h+l-(7*m)+114)/31)
     return (year, month, day)
+
+
+if __name__ == '__main__':
+    
+    d = calculateEasterDate(2019)
+    print(*d) # will print 2019 4 21
