@@ -21,10 +21,10 @@ def calculateEasterDate(year):
     n = (h+l-(7*m)+114) % 31
     day = n+1
     month = math.floor((h+l-(7*m)+114)/31)
-    return (year, month, day)
+    return {'year':year, 'month':month, 'day':day}
 
 
 if __name__ == '__main__':
-    
-    d = calculateEasterDate(2019)
-    print(*d) # will print 2019 4 21
+    d = calculateEasterDate(2020)
+    print(d) # {'year': 2020, 'month': 4, 'day': 12}
+    print("{year:04d}-{month:02d}-{day:02d}".format(**d)) # 2020-04-12
