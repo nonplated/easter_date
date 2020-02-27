@@ -1,7 +1,7 @@
 import math
 
 
-def calculateEasterDate(year):
+def get_easter_date(year):
     '''
         for gregorian calendar
         method of Jean Meeus (https://en.wikipedia.org/wiki/Jean_Meeus)
@@ -26,6 +26,6 @@ def calculateEasterDate(year):
 
 
 if __name__ == '__main__':
-    d = calculateEasterDate(2020)
+    d = get_easter_date(2020)
     print(d)  # {'year': 2020, 'month': 4, 'day': 12}
     print("{year:04d}-{month:02d}-{day:02d}".format(**d))  # 2020-04-12
